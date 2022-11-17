@@ -1,0 +1,735 @@
+@import '../scss/normalize.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,italic,500,500italic,700,700italic,&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+.container {
+    max-width: 1194px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.search-form {
+    margin: 0 0 0 76px;
+    background: rgba(238, 238, 238, 0.71);
+    border-radius: 10px;
+    display: flex;
+    max-width: 620px;
+    flex-grow: 1;
+    position: relative;
+}
+.auth {
+    margin: 0 0 0 auto;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 13px 20px;
+}
+
+.search-button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+.login {
+    background: #EBEBEB;
+    border-radius: 50px;
+    padding: 16px 30px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.shoping-cart {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #F66A15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 30px;
+    position: relative;
+}
+
+.shoping-counter {
+    font-size: 8px;
+    line-height: 9px;
+    color: #000000;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 50%;
+    background: #FFAF19;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+// ========================= Slider =========================
+
+.slide {
+    position: relative;
+    border-radius: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    overflow: hidden;
+}
+
+.swiper {
+    position: relative;
+}
+
+.slider__buttons {
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.slider-button {
+    cursor: pointer;
+}
+
+.slide__content {
+    max-width: 400px;
+    position: relative;
+}
+
+.slide__title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 51px;
+    margin: 0 0 15px 0;
+}
+
+.slide__text {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 30px 0;
+}
+
+.slide__text-light {
+    position: relative;
+   // background-color: grey;
+    color: #ffffff;
+}
+
+.slide__summer,
+.slide__autumn,
+.slide__vitamins {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+   // background: url('../img/summer.png')0 0/cover no-repead;
+   // background:  linear gradient(90deg,rgba(0, 0, 0, 0.43) 40.45%, 
+   // rgba(0, 0, 0, 0) 100%), url('../img/summer.png');
+}
+
+/*.slide__autumn {
+    background: url('../img/autumn.png')0 0/cover no-repeat;
+}
+
+.slide__vitamins {
+    background: url('../img/holiday.png')0 0/cover no-repeat;
+}*/
+ .slide::before{
+     content:'';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: linear-gradient(90deg,rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%);     
+ }
+
+.button__primery {
+    background: #F47322;
+    color: #ffffff;
+}
+
+.button {
+    border-radius: 25px;
+    padding: 11px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+// ====================== Promo ==================
+
+.promo {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: -20px;
+}
+
+.card {
+    margin: 20px;    
+    flex: 50%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 32px;
+    max-width: 570px;
+    min-height: 380px;
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    }
+}
+
+.card__text-lingh {
+    color: #ffffff;
+}
+
+.card__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    margin: 4px 0 21px 0;
+    text-align: left;
+}
+
+.card__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    max-width: 200px;
+}
+
+.card__price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    display: block;
+    margin: 0 0 8px 0;
+}
+
+.card__delivery {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    display: block;
+    margin: 0 0 25px 0;
+}
+
+.button__default {
+    background-color: #ffffff;
+    color: #5F5F61;
+    weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/*.sweet-basket {
+    background: url('../img/sweet-basket.png')center/cover no-repeat;
+}*/
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+
+// ======================== delivery__week ========================
+
+.section__title {
+    font-size: 32px;
+    line-height: 23px ;   
+    color: #000000;
+    font-weight: 500;
+    margin: 0 0 47px 0;
+}
+
+.delivery__week {
+    padding: 100px 0;   
+}
+
+.delivery__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.delivery__card {
+    margin: 15px;
+    position: relative;
+    width: 275px;
+    height: 182px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.delivery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delivery__tag {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #49494F;   
+    padding: 5px 10px;
+}
+
+.tag__health {
+    background: #D0FD89;
+}
+
+.tag__vegetables {
+    background: #AEBC41;
+}
+
+.tag__meat {
+    background: #B86B78;
+}
+
+.tag__bird {
+    background: #D68334;
+}
+
+.tag__fish {
+    background: #CD6255;
+}
+
+.tag__baby {
+    background: #FFFDBF;
+}
+
+.tag__parents {
+    background: #F6FDC8;
+}
+
+.tag__holiday {
+    background: #FEF7FE;
+}
+
+.category {
+    padding: 40px 0 60px 0;
+}
+
+//======================== tabs__card =====================
+
+.category {
+    background: #F6F6F6;
+}
+
+.tabs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 62px 0;
+   
+}
+
+.tabs__link {
+    font-size: 20px;
+    line-height: 23px;
+    color: #49494F;
+    text-decoration: none;
+    margin: 0 58px 0 0;
+    &.active {
+        color: #F37321;
+    }
+}
+
+.tabs__card {
+    max-width: 270px;
+    border-radius: 20px;
+    overflow: hidden ;
+    background-color: #ffffff;
+}
+
+.tabs__image {
+   max-width: 100%;
+  
+}
+
+.tabs__columns {
+    display: flex;
+    margin: -16px;
+    justify-content: space-between;
+    margin: 0 0 60px 0;
+}
+
+.tabs__contant {
+    margin: 16px;
+}
+
+.tabs__card-contant {
+    padding: 23px;
+}
+
+.tabs__title {
+    padding: 0 0 13px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.tabs__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: #B9B9BE;
+}
+
+.tabs__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabs__price {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 23px;
+    color: #4B4B51;
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.tabs__weight {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #AAAAB1;
+}
+
+.button__outline {
+    padding: 15px 25px;
+    border: 2px solid #F37321;    
+    border-radius: 33px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F37321;
+}
+
+.button-centre {
+    display: block;
+    margin: auto;
+    width: 315px;
+    cursor: pointer;
+}
+
+// ============================ benefits ==========================
+
+.benefits {
+    padding: 62px 0 200px 0;
+}
+
+.benefits__title {
+    margin: 0 0 52px 0;
+}
+
+.benefits__columns {
+    display: flex;
+    justify-content: space-between;
+    margin: -16px;
+}
+
+.benefits__item {
+    padding: 30px 24px 25px 24px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    max-width: 270px;
+
+    .benefits__item-img {
+        max-width: 100%;
+        margin: 0 0 34px;
+    }
+    
+    .benefits__item-title {
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        text-align: center;
+        margin: 0 0 13px;
+        min-width: 159px;
+    }
+
+    .benefits__item-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #49494F;
+    }
+}
+
+// ====================== footer ===================
+
+.footer {
+    padding: 40px 0;
+    background: #F6F6F6;
+
+    .footer__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footer__logo {
+            max-width: 205px;
+            margin: 0 50px 0 0;
+        }
+        .footer__nav {
+            flex-grow: 2;        
+            .footer__link {           
+                font-size: 16px;
+                line-height: 23px;
+                text-decoration-line: underline;
+                color: #000000;
+                margin: 0 50px 0 0;
+                white-space: nowrap;
+            }
+      }
+        .social__links {
+            display: flex;
+            align-items: center;           
+            .social__link {
+                margin: 0 0 0 20px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+    .search-form {
+        margin: 0 40px 0 40px;
+    }
+    .delivery__week {
+        padding: 70px 0;
+    }
+    
+    .tabs__columns {
+        flex-wrap: wrap;
+        
+    }
+    .tabs__contant {
+        max-width: calc(50% - 32px);
+    }
+    .tabs__card{
+        //flex: 50%;
+        max-width: 100%;
+    }
+    .benefits {
+        padding: 62px 0 100px 0;
+    }
+    .benefits__columns {
+        flex-wrap: wrap;
+    }  
+    .benefits__item {
+        max-width: calc(50% - 32px);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .slide {
+        padding: 70px;
+    }
+    .delivery__week {
+        padding: 40px 0 60px 0;
+    }
+    .delivery__card {
+        width: calc(50% - 30px);
+    }
+    .footer__logo {
+        margin: 0 40px 0 0;
+    }
+}
+
+@media (max-width: 768px){
+    .container {
+        max-width: 560px;
+    }
+    .header {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+   .login {
+        margin: 0;
+    }
+    .search-form {
+        order: 5;
+        margin: 20px 20px;
+        max-width: 100%;
+    }
+    .promo {
+        flex-wrap: wrap;
+    }
+    .card {
+        flex: 0 1 100%;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+    }
+    .footer__nav {
+        display: flex;
+        flex-wrap: wrap;
+        }
+    }
+
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 90%;
+    }
+    .tabs__contant {
+        max-width: 100%;
+    }    
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 40px 0;
+    }
+    .tabs__item {
+        padding: 15px 0;
+    }
+    .tabs__link {
+        font-size: 22px;
+    }
+    .section__title {
+        line-height: 32px;
+        margin: 0 0 20px 0;
+    }
+    .delivery__card {
+        flex: 0 1 100%;
+    }
+    .benefits__item {
+        max-width: 100%;
+    }
+    /*.footer__nav {
+        order: 4;
+    }*/
+    .footer__wrapper {
+        flex-direction: column;
+
+    }
+    .footer__nav {
+        margin: 30px 0; 
+    }
+    .footer__link {           
+        font-size: 20px;
+    }
+    .social__links {
+        margin-left: 0;
+    }
+    .slider__buttons {        
+        right: 50%;
+        bottom: 5px;
+        transform: translateX(50%);        
+    }
+    .slide {
+        padding: 30px;
+    }
+    .slide__content {
+        text-align: center;
+    }
+    .section__title,
+    .benefits__title{
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 479px) {
+    
+    .slide__text-light {
+        min-height: 452px;
+    }
+    .slide__title {
+        font-size: 45px;
+    }
+    .slide {
+        padding: 15px;
+    }
+    .button__default {
+        white-space: nowrap;
+    }
+    .delivery__week {
+        padding: 20px 0 20px 0;
+    }
+    .tabs {
+        margin: 0 0 20px 0;
+    }
+}
